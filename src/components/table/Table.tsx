@@ -1,16 +1,4 @@
-import { ReactElement } from "react";
-
-export interface ColumnProps<T> {
-  key: string;
-  title: string | ReactElement;
-  render?: (column: ColumnProps<T>, item: T) => ReactElement;
-}
-
-interface Props<T> {
-  columns: Array<ColumnProps<T>>;
-  data?: T[];
-  className?: string;
-}
+import { Props } from "./type";
 
 const Table = <T,>({ data, columns }: Props<T>) => {
   const headers = columns.map((column, index) => (
