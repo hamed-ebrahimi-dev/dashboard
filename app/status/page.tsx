@@ -1,5 +1,6 @@
 import { data } from "@/MOCDATA";
-import Table, { ColumnProps } from "@/src/components/table/Table";
+import Table from "@/src/components/table/Table";
+import { ColumnProps } from "@/src/components/table/type";
 
 // Data type definition
 export type Data = {
