@@ -6,11 +6,11 @@ export interface ColumnProps<T> {
   render?: (column: ColumnProps<T>, item: T) => ReactElement;
 }
 
-type Props<T> = {
+interface Props<T> {
   columns: Array<ColumnProps<T>>;
   data?: T[];
   className?: string;
-};
+}
 
 const Table = <T,>({ data, columns }: Props<T>) => {
   const headers = columns.map((column, index) => (
