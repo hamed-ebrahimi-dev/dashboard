@@ -1,9 +1,8 @@
 export type ColumnProps<T> = {
   key: string;
-  title: string | ReactElement;
+  title: ReactElement;
   render?: (column: ColumnProps<T>, item: T) => ReactElement;
 };
-
 type Props<T> = {
   columns: Array<ColumnProps<T>>;
   data?: T[];
@@ -32,4 +31,11 @@ export type Data = {
     | "used(almost new)"
     | "used(brocken)"
     | "not used(brocken)";
+  warehouse: string;
+};
+
+type RowCardProps<T> = {
+  row: T;
+  columns: Array<ColumnProps<T>>;
+  rowIndex: number;
 };
