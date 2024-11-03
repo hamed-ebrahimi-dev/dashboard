@@ -3,7 +3,6 @@ export type ColumnProps<T> = {
   title: ReactElement;
   render?: (column: ColumnProps<T>, item: T) => ReactElement;
 };
-
 type Props<T> = {
   columns: Array<ColumnProps<T>>;
   data?: T[];

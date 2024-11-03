@@ -8,7 +8,6 @@ export const Table = <T,>({ data, columns }: Props<T>) => {
       {column.title}
     </th>
   ));
-
   const rows = !data?.length ? (
     <tr>
       <td colSpan={columns.length}>No data</td>
@@ -23,7 +22,6 @@ export const Table = <T,>({ data, columns }: Props<T>) => {
       />
     ))
   );
-
   return (
     <table className="text-right" dir="rtl">
       <thead className="text-black text-[14px]">
